@@ -267,3 +267,32 @@
   });
 
 })()
+
+
+const form = document.getElementById("book-form");
+const fullname = document.getElementById("name");
+const mail = document.getElementById("email");
+const fsubject = document.getElementById("subject");
+const fmessage = document.getElementById("message");
+const btn = document.getElementById("button");
+const id = document.getElementById("ServiceId");
+
+
+btn.addEventListener("click",(e) => {
+
+console.log()
+e.preventDefault(fullname.value);
+db.collection('bookings').doc().set({
+full_name:fullname.value,
+email:mail.value,
+phone:fsubject.value,
+message:fmessage.value,
+id:id.options[id.selectedIndex].text,  
+}).then(() => {
+ 
+   form.reset();
+  
+  });
+
+
+});
