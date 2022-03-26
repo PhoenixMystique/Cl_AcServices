@@ -276,7 +276,7 @@ const fsubject = document.getElementById("subject");
 const fmessage = document.getElementById("message");
 const btn = document.getElementById("button");
 const id = document.getElementById("ServiceId");
-
+const x = document.getElementById("sent");
 
 btn.addEventListener("click",(e) => {
 
@@ -291,7 +291,7 @@ id:id.options[id.selectedIndex].text,
 }).then(() => {
  
    form.reset();
-  
+   x.style.display = "block";
   });
 
 
